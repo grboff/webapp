@@ -19,7 +19,7 @@ jobs:
       uses: docker/setup-buildx-action@v1
 
     - name: Build Docker image
-      run: docker build -t mywebapp .
+      run: docker build -t mywebapp -f ./docker/Dockerfile .
 
     - name: Run tests
       run: echo "Running tests" # Замените эту команду на ваш скрипт тестирования
